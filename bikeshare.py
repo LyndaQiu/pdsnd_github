@@ -202,6 +202,8 @@ def display_data(df):
         show_rawdata = show_rawdata.strip().lower()
         print('-'*40)
 
+    print('\nDone with display data')
+
 def main():
     """
     Main function loop will keep analysis until the user likes to restart.
