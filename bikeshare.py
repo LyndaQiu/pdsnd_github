@@ -78,6 +78,7 @@ def load_data(city, month, day):
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
 
+    print('Finish loading data...')
     return df
 
 
@@ -201,7 +202,12 @@ def display_data(df):
         show_rawdata = show_rawdata.strip().lower()
         print('-'*40)
 
+    print('\nDone with display data')
+
 def main():
+    """
+    Main function loop will keep analysis until the user likes to restart.
+    """
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
@@ -215,7 +221,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
